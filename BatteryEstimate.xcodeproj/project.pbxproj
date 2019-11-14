@@ -1,0 +1,584 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2149A729237D9A7E009EFD30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2149A728237D9A7E009EFD30 /* AppDelegate.swift */; };
+		2149A72B237D9A7E009EFD30 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2149A72A237D9A7E009EFD30 /* ViewController.swift */; };
+		2149A72D237D9A80009EFD30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2149A72C237D9A80009EFD30 /* Assets.xcassets */; };
+		2149A730237D9A80009EFD30 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2149A72E237D9A80009EFD30 /* Main.storyboard */; };
+		2149A73C237D9A81009EFD30 /* BatteryEstimateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2149A73B237D9A81009EFD30 /* BatteryEstimateTests.swift */; };
+		2149A747237D9A81009EFD30 /* BatteryEstimateUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2149A746237D9A81009EFD30 /* BatteryEstimateUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2149A738237D9A81009EFD30 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2149A71D237D9A7E009EFD30 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2149A724237D9A7E009EFD30;
+			remoteInfo = BatteryEstimate;
+		};
+		2149A743237D9A81009EFD30 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2149A71D237D9A7E009EFD30 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2149A724237D9A7E009EFD30;
+			remoteInfo = BatteryEstimate;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2149A725237D9A7E009EFD30 /* BatteryEstimate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BatteryEstimate.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2149A728237D9A7E009EFD30 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2149A72A237D9A7E009EFD30 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2149A72C237D9A80009EFD30 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2149A72F237D9A80009EFD30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2149A731237D9A80009EFD30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2149A732237D9A80009EFD30 /* BatteryEstimate.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BatteryEstimate.entitlements; sourceTree = "<group>"; };
+		2149A737237D9A81009EFD30 /* BatteryEstimateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BatteryEstimateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2149A73B237D9A81009EFD30 /* BatteryEstimateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatteryEstimateTests.swift; sourceTree = "<group>"; };
+		2149A73D237D9A81009EFD30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2149A742237D9A81009EFD30 /* BatteryEstimateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BatteryEstimateUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2149A746237D9A81009EFD30 /* BatteryEstimateUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatteryEstimateUITests.swift; sourceTree = "<group>"; };
+		2149A748237D9A81009EFD30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2149A722237D9A7E009EFD30 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2149A734237D9A80009EFD30 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2149A73F237D9A81009EFD30 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2149A71C237D9A7E009EFD30 = {
+			isa = PBXGroup;
+			children = (
+				2149A727237D9A7E009EFD30 /* BatteryEstimate */,
+				2149A73A237D9A81009EFD30 /* BatteryEstimateTests */,
+				2149A745237D9A81009EFD30 /* BatteryEstimateUITests */,
+				2149A726237D9A7E009EFD30 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2149A726237D9A7E009EFD30 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2149A725237D9A7E009EFD30 /* BatteryEstimate.app */,
+				2149A737237D9A81009EFD30 /* BatteryEstimateTests.xctest */,
+				2149A742237D9A81009EFD30 /* BatteryEstimateUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2149A727237D9A7E009EFD30 /* BatteryEstimate */ = {
+			isa = PBXGroup;
+			children = (
+				2149A728237D9A7E009EFD30 /* AppDelegate.swift */,
+				2149A72A237D9A7E009EFD30 /* ViewController.swift */,
+				2149A72C237D9A80009EFD30 /* Assets.xcassets */,
+				2149A72E237D9A80009EFD30 /* Main.storyboard */,
+				2149A731237D9A80009EFD30 /* Info.plist */,
+				2149A732237D9A80009EFD30 /* BatteryEstimate.entitlements */,
+			);
+			path = BatteryEstimate;
+			sourceTree = "<group>";
+		};
+		2149A73A237D9A81009EFD30 /* BatteryEstimateTests */ = {
+			isa = PBXGroup;
+			children = (
+				2149A73B237D9A81009EFD30 /* BatteryEstimateTests.swift */,
+				2149A73D237D9A81009EFD30 /* Info.plist */,
+			);
+			path = BatteryEstimateTests;
+			sourceTree = "<group>";
+		};
+		2149A745237D9A81009EFD30 /* BatteryEstimateUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2149A746237D9A81009EFD30 /* BatteryEstimateUITests.swift */,
+				2149A748237D9A81009EFD30 /* Info.plist */,
+			);
+			path = BatteryEstimateUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2149A724237D9A7E009EFD30 /* BatteryEstimate */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2149A74B237D9A81009EFD30 /* Build configuration list for PBXNativeTarget "BatteryEstimate" */;
+			buildPhases = (
+				2149A721237D9A7E009EFD30 /* Sources */,
+				2149A722237D9A7E009EFD30 /* Frameworks */,
+				2149A723237D9A7E009EFD30 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BatteryEstimate;
+			productName = BatteryEstimate;
+			productReference = 2149A725237D9A7E009EFD30 /* BatteryEstimate.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2149A736237D9A80009EFD30 /* BatteryEstimateTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2149A74E237D9A81009EFD30 /* Build configuration list for PBXNativeTarget "BatteryEstimateTests" */;
+			buildPhases = (
+				2149A733237D9A80009EFD30 /* Sources */,
+				2149A734237D9A80009EFD30 /* Frameworks */,
+				2149A735237D9A80009EFD30 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2149A739237D9A81009EFD30 /* PBXTargetDependency */,
+			);
+			name = BatteryEstimateTests;
+			productName = BatteryEstimateTests;
+			productReference = 2149A737237D9A81009EFD30 /* BatteryEstimateTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2149A741237D9A81009EFD30 /* BatteryEstimateUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2149A751237D9A81009EFD30 /* Build configuration list for PBXNativeTarget "BatteryEstimateUITests" */;
+			buildPhases = (
+				2149A73E237D9A81009EFD30 /* Sources */,
+				2149A73F237D9A81009EFD30 /* Frameworks */,
+				2149A740237D9A81009EFD30 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2149A744237D9A81009EFD30 /* PBXTargetDependency */,
+			);
+			name = BatteryEstimateUITests;
+			productName = BatteryEstimateUITests;
+			productReference = 2149A742237D9A81009EFD30 /* BatteryEstimateUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2149A71D237D9A7E009EFD30 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1110;
+				LastUpgradeCheck = 1110;
+				ORGANIZATIONNAME = "Nafee Workshop";
+				TargetAttributes = {
+					2149A724237D9A7E009EFD30 = {
+						CreatedOnToolsVersion = 11.1;
+					};
+					2149A736237D9A80009EFD30 = {
+						CreatedOnToolsVersion = 11.1;
+						TestTargetID = 2149A724237D9A7E009EFD30;
+					};
+					2149A741237D9A81009EFD30 = {
+						CreatedOnToolsVersion = 11.1;
+						TestTargetID = 2149A724237D9A7E009EFD30;
+					};
+				};
+			};
+			buildConfigurationList = 2149A720237D9A7E009EFD30 /* Build configuration list for PBXProject "BatteryEstimate" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2149A71C237D9A7E009EFD30;
+			productRefGroup = 2149A726237D9A7E009EFD30 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2149A724237D9A7E009EFD30 /* BatteryEstimate */,
+				2149A736237D9A80009EFD30 /* BatteryEstimateTests */,
+				2149A741237D9A81009EFD30 /* BatteryEstimateUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2149A723237D9A7E009EFD30 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2149A72D237D9A80009EFD30 /* Assets.xcassets in Resources */,
+				2149A730237D9A80009EFD30 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2149A735237D9A80009EFD30 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2149A740237D9A81009EFD30 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2149A721237D9A7E009EFD30 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2149A72B237D9A7E009EFD30 /* ViewController.swift in Sources */,
+				2149A729237D9A7E009EFD30 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2149A733237D9A80009EFD30 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2149A73C237D9A81009EFD30 /* BatteryEstimateTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2149A73E237D9A81009EFD30 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2149A747237D9A81009EFD30 /* BatteryEstimateUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2149A739237D9A81009EFD30 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2149A724237D9A7E009EFD30 /* BatteryEstimate */;
+			targetProxy = 2149A738237D9A81009EFD30 /* PBXContainerItemProxy */;
+		};
+		2149A744237D9A81009EFD30 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2149A724237D9A7E009EFD30 /* BatteryEstimate */;
+			targetProxy = 2149A743237D9A81009EFD30 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2149A72E237D9A80009EFD30 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2149A72F237D9A80009EFD30 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2149A749237D9A81009EFD30 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2149A74A237D9A81009EFD30 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		2149A74C237D9A81009EFD30 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = BatteryEstimate/BatteryEstimate.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = S5F8M54DQU;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = BatteryEstimate/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nafeeworkshop.BatteryEstimate;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		2149A74D237D9A81009EFD30 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = BatteryEstimate/BatteryEstimate.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = S5F8M54DQU;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = BatteryEstimate/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nafeeworkshop.BatteryEstimate;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		2149A74F237D9A81009EFD30 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = S5F8M54DQU;
+				INFOPLIST_FILE = BatteryEstimateTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nafeeworkshop.BatteryEstimateTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BatteryEstimate.app/Contents/MacOS/BatteryEstimate";
+			};
+			name = Debug;
+		};
+		2149A750237D9A81009EFD30 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = S5F8M54DQU;
+				INFOPLIST_FILE = BatteryEstimateTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nafeeworkshop.BatteryEstimateTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BatteryEstimate.app/Contents/MacOS/BatteryEstimate";
+			};
+			name = Release;
+		};
+		2149A752237D9A81009EFD30 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = S5F8M54DQU;
+				INFOPLIST_FILE = BatteryEstimateUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nafeeworkshop.BatteryEstimateUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = BatteryEstimate;
+			};
+			name = Debug;
+		};
+		2149A753237D9A81009EFD30 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = S5F8M54DQU;
+				INFOPLIST_FILE = BatteryEstimateUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nafeeworkshop.BatteryEstimateUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = BatteryEstimate;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2149A720237D9A7E009EFD30 /* Build configuration list for PBXProject "BatteryEstimate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2149A749237D9A81009EFD30 /* Debug */,
+				2149A74A237D9A81009EFD30 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2149A74B237D9A81009EFD30 /* Build configuration list for PBXNativeTarget "BatteryEstimate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2149A74C237D9A81009EFD30 /* Debug */,
+				2149A74D237D9A81009EFD30 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2149A74E237D9A81009EFD30 /* Build configuration list for PBXNativeTarget "BatteryEstimateTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2149A74F237D9A81009EFD30 /* Debug */,
+				2149A750237D9A81009EFD30 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2149A751237D9A81009EFD30 /* Build configuration list for PBXNativeTarget "BatteryEstimateUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2149A752237D9A81009EFD30 /* Debug */,
+				2149A753237D9A81009EFD30 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2149A71D237D9A7E009EFD30 /* Project object */;
+}
