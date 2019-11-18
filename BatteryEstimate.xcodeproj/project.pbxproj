@@ -13,6 +13,7 @@
 		2149A730237D9A80009EFD30 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2149A72E237D9A80009EFD30 /* Main.storyboard */; };
 		2149A73C237D9A81009EFD30 /* BatteryEstimateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2149A73B237D9A81009EFD30 /* BatteryEstimateTests.swift */; };
 		2149A747237D9A81009EFD30 /* BatteryEstimateUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2149A746237D9A81009EFD30 /* BatteryEstimateUITests.swift */; };
+		2149A757237DD1BC009EFD30 /* BatteryEstimate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2149A756237DD1BC009EFD30 /* BatteryEstimate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		2149A742237D9A81009EFD30 /* BatteryEstimateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BatteryEstimateUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2149A746237D9A81009EFD30 /* BatteryEstimateUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatteryEstimateUITests.swift; sourceTree = "<group>"; };
 		2149A748237D9A81009EFD30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2149A756237DD1BC009EFD30 /* BatteryEstimate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatteryEstimate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				2149A728237D9A7E009EFD30 /* AppDelegate.swift */,
+				2149A756237DD1BC009EFD30 /* BatteryEstimate.swift */,
 				2149A72A237D9A7E009EFD30 /* ViewController.swift */,
 				2149A72C237D9A80009EFD30 /* Assets.xcassets */,
 				2149A72E237D9A80009EFD30 /* Main.storyboard */,
@@ -256,6 +259,7 @@
 			files = (
 				2149A72B237D9A7E009EFD30 /* ViewController.swift in Sources */,
 				2149A729237D9A7E009EFD30 /* AppDelegate.swift in Sources */,
+				2149A757237DD1BC009EFD30 /* BatteryEstimate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

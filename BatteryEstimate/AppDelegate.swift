@@ -11,16 +11,27 @@ import Cocoa
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-
+    let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
+    var batteryEstimate = BatteryEstimate()
+    var updateTimer: Timer?
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        // Insert code here to initialize your application
+        
+        updateTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateEstimate), userInfo: nil, repeats: true)
+        
+        RunLoop.current.add(updateTimer!, forMode: RunLoop.Mode.common)
+        
+        //⚡︎ official high voltage emoji
+        //ϟ some symbol that looks like high voltage
+        statusItem.button?.title = "⚡︎ " + batteryEstimate.getTimeRemaining()
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
-        // Insert code here to tear down your application
+        
     }
-
-
+    
+    @objc func updateEstimate() {
+        statusItem.button?.title = "⚡︎ " + batteryEstimate.getTimeRemaining()
+    }
 }
 
