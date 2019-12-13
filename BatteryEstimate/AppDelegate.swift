@@ -46,28 +46,39 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @objc func getTimeRemaining() -> String {
         let remainingSeconds: Double = IOPSGetTimeRemainingEstimate()
         
-        if (remainingSeconds == kIOPSTimeRemainingUnknown) {
-            return "Calculating"
-        }
-        
-        //Later add feature that tells if its charging or plugged in and not charging
-        if (remainingSeconds == kIOPSTimeRemainingUnlimited) {
-            return "AC"
-        }
-        
+        //most likely condition so test first for optimization
         if (remainingSeconds > 0.0) {
-            let remainingMinutes: Double = remainingSeconds / 60
-            let formattedHours: Int = Int(floor(remainingMinutes / 60))
-            let formattedMinutes: Int = Int(remainingMinutes) % 60
+            let formattedHours: Int = Int(floor(remainingSeconds / 3600))
+            let formattedMinutes: Int = Int(remainingSeconds / 60) % 60
             
-            if (formattedMinutes < 10) {
-                return String(formattedHours) + ":" + "0" + String(formattedMinutes)
-            }
+            if (formattedMinutes < 10) { return String(formattedHours) + ":" + "0" + String(formattedMinutes) }
             
             return String(formattedHours) + ":" + String(formattedMinutes)
         }
         
-        return "Broken"
+        //if its not greater than 0 then check if its unknown, if so just say that its being calculated
+        else if (remainingSeconds == kIOPSTimeRemainingUnknown) { return "Calculating" }
+            
+        //remainingSeconds fell through its checks so device must be plugged in, check if its charging and return so
+        else if (isCharging()) { return "Charging" }
+        
+        //fell through charging check, must not be charging
+        return "Not Charging"
+    }
+    
+    //checks if the battery is charging
+    func isCharging() -> Bool {
+        let info = IOPSCopyPowerSourcesInfo().takeRetainedValue()
+        let list = IOPSCopyPowerSourcesList(info).takeRetainedValue() as Array
+        
+        for ps in list {
+            if let desc = IOPSGetPowerSourceDescription(info, ps).takeUnretainedValue() as? [String: Any] {
+                //if the powersource is the battery, return if it is charging or not
+                if (desc[kIOPSNameKey] as? String == "InternalBattery-0") { return desc[kIOPSIsChargingKey] as! Bool }
+            }
+        }
+        
+        return false;
     }
 }
 
