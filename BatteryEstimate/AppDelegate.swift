@@ -74,7 +74,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         for ps in list {
             if let desc = IOPSGetPowerSourceDescription(info, ps).takeUnretainedValue() as? [String: Any] {
                 //if the powersource is the battery, return if it is charging or not
-                if (desc[kIOPSNameKey] as? String == "InternalBattery-0") { return desc[kIOPSIsChargingKey] as! Bool }
+                let psName = desc[kIOPSNameKey] as? String
+                let isCharging = desc[kIOPSIsChargingKey] as? Bool
+                if (psName != nil && psName == "InternalBattery-0" && isCharging != nil) { return isCharging! }
             }
         }
         
