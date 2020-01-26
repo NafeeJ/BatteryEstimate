@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import IOKit.ps
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
@@ -14,12 +15,23 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
     var updateTimer: Timer?
     var menu: NSMenu?
+    var windowController: MainWindowController?
+    
+    static let mainIdentifier = "com.nafeeworkshop.BatteryEstimate"
+    static let helperIdentifier = "com.nafeeworkshop.BatteryEstimate-Helper"
+    
+    //Prefereces and their respective keys
+    struct Preferences {
+        static var autoLaunch = false
+        static let autoLaunchKey: String = "LaunchOnStartup"
+    }
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         
         //Create menu
         menu = NSMenu()
-        menu!.addItem(NSMenuItem(title: "Quit BatteryEstimate", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q"))
+        menu?.addItem(NSMenuItem(title: "Preferences...", action: #selector(loadPrefsWindow), keyEquivalent: "p"))
+        menu?.addItem(NSMenuItem(title: "Quit BatteryEstimate", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q"))
         statusItem.menu = menu
         
         //Not show in Dock
@@ -28,6 +40,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         //Update time remaining
         updateTimer = Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(updateEstimate), userInfo: nil, repeats: true)
         RunLoop.current.add(updateTimer!, forMode: RunLoop.Mode.common)
+        
+        loadPreferences()
+        
+        //initialize window
+        windowController = (NSStoryboard(name: "Main", bundle: nil).instantiateController(withIdentifier: "mainWindow") as! MainWindowController)
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
@@ -82,5 +99,23 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         return false;
     }
+    
+    func loadPreferences() {
+        //Launch on startup
+        if (UserDefaults.standard.value(forKey: Preferences.autoLaunchKey) != nil) {
+            Preferences.autoLaunch = UserDefaults.standard.value(forKey: Preferences.autoLaunchKey) as! Bool
+        }
+    }
+    
+    @objc func loadPrefsWindow() {
+        windowController?.showWindow(nil)
+        NSApp.activate(ignoringOtherApps: true)
+    }
 }
 
+//Sets up the main window which will be for preferences
+class MainWindowController: NSWindowController {
+    override func windowDidLoad() {
+        super.windowDidLoad()
+    }
+}

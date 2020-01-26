@@ -7,16 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2144D5B923CB49930016B4E8 /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2144D5B823CB49930016B4E8 /* ServiceManagement.framework */; };
+		2144D60B23CB4BD00016B4E8 /* BatteryEstimate Helper.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2144D60623CB4B9D0016B4E8 /* BatteryEstimate Helper.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2149A729237D9A7E009EFD30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2149A728237D9A7E009EFD30 /* AppDelegate.swift */; };
 		2149A72B237D9A7E009EFD30 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2149A72A237D9A7E009EFD30 /* ViewController.swift */; };
 		2149A72D237D9A80009EFD30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2149A72C237D9A80009EFD30 /* Assets.xcassets */; };
 		2149A730237D9A80009EFD30 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2149A72E237D9A80009EFD30 /* Main.storyboard */; };
 		2149A73C237D9A81009EFD30 /* BatteryEstimateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2149A73B237D9A81009EFD30 /* BatteryEstimateTests.swift */; };
 		2149A747237D9A81009EFD30 /* BatteryEstimateUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2149A746237D9A81009EFD30 /* BatteryEstimateUITests.swift */; };
-		2149A757237DD1BC009EFD30 /* BatteryEstimate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2149A756237DD1BC009EFD30 /* BatteryEstimate.swift */; };
+		216A355923D52E3C007507A5 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 216A355523D52E3C007507A5 /* Cocoa.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		2144D60523CB4B9D0016B4E8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2144D5FF23CB4B9C0016B4E8 /* BatteryEstimate Helper.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2144D5D023CB4B9B0016B4E8;
+			remoteInfo = "BatteryEstimate Helper";
+		};
+		2144D60723CB4B9D0016B4E8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2144D5FF23CB4B9C0016B4E8 /* BatteryEstimate Helper.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2144D5E223CB4B9C0016B4E8;
+			remoteInfo = "BatteryEstimate HelperTests";
+		};
+		2144D60923CB4B9D0016B4E8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2144D5FF23CB4B9C0016B4E8 /* BatteryEstimate Helper.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2144D5ED23CB4B9C0016B4E8;
+			remoteInfo = "BatteryEstimate HelperUITests";
+		};
 		2149A738237D9A81009EFD30 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 2149A71D237D9A7E009EFD30 /* Project object */;
@@ -33,7 +56,22 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		2144D5BA23CB4A300016B4E8 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Contents/Library/LoginItems;
+			dstSubfolderSpec = 1;
+			files = (
+				2144D60B23CB4BD00016B4E8 /* BatteryEstimate Helper.app in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		2144D5B823CB49930016B4E8 /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
+		2144D5FF23CB4B9C0016B4E8 /* BatteryEstimate Helper.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "BatteryEstimate Helper.xcodeproj"; path = "BatteryEstimate Helper/BatteryEstimate Helper.xcodeproj"; sourceTree = "<group>"; };
 		2149A725237D9A7E009EFD30 /* BatteryEstimate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BatteryEstimate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2149A728237D9A7E009EFD30 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2149A72A237D9A7E009EFD30 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,7 +85,7 @@
 		2149A742237D9A81009EFD30 /* BatteryEstimateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BatteryEstimateUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2149A746237D9A81009EFD30 /* BatteryEstimateUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatteryEstimateUITests.swift; sourceTree = "<group>"; };
 		2149A748237D9A81009EFD30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2149A756237DD1BC009EFD30 /* BatteryEstimate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatteryEstimate.swift; sourceTree = "<group>"; };
+		216A355523D52E3C007507A5 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +93,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				216A355923D52E3C007507A5 /* Cocoa.framework in Frameworks */,
+				2144D5B923CB49930016B4E8 /* ServiceManagement.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +115,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2144D5B723CB49930016B4E8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				216A355523D52E3C007507A5 /* Cocoa.framework */,
+				2144D5B823CB49930016B4E8 /* ServiceManagement.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2144D60023CB4B9C0016B4E8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2144D60623CB4B9D0016B4E8 /* BatteryEstimate Helper.app */,
+				2144D60823CB4B9D0016B4E8 /* BatteryEstimate HelperTests.xctest */,
+				2144D60A23CB4B9D0016B4E8 /* BatteryEstimate HelperUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		2149A71C237D9A7E009EFD30 = {
 			isa = PBXGroup;
 			children = (
@@ -82,6 +141,8 @@
 				2149A73A237D9A81009EFD30 /* BatteryEstimateTests */,
 				2149A745237D9A81009EFD30 /* BatteryEstimateUITests */,
 				2149A726237D9A7E009EFD30 /* Products */,
+				2144D5B723CB49930016B4E8 /* Frameworks */,
+				2144D5FF23CB4B9C0016B4E8 /* BatteryEstimate Helper.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,7 +160,6 @@
 			isa = PBXGroup;
 			children = (
 				2149A728237D9A7E009EFD30 /* AppDelegate.swift */,
-				2149A756237DD1BC009EFD30 /* BatteryEstimate.swift */,
 				2149A72A237D9A7E009EFD30 /* ViewController.swift */,
 				2149A72C237D9A80009EFD30 /* Assets.xcassets */,
 				2149A72E237D9A80009EFD30 /* Main.storyboard */,
@@ -137,6 +197,7 @@
 				2149A721237D9A7E009EFD30 /* Sources */,
 				2149A722237D9A7E009EFD30 /* Frameworks */,
 				2149A723237D9A7E009EFD30 /* Resources */,
+				2144D5BA23CB4A300016B4E8 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -218,6 +279,12 @@
 			mainGroup = 2149A71C237D9A7E009EFD30;
 			productRefGroup = 2149A726237D9A7E009EFD30 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 2144D60023CB4B9C0016B4E8 /* Products */;
+					ProjectRef = 2144D5FF23CB4B9C0016B4E8 /* BatteryEstimate Helper.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				2149A724237D9A7E009EFD30 /* BatteryEstimate */,
@@ -226,6 +293,30 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		2144D60623CB4B9D0016B4E8 /* BatteryEstimate Helper.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "BatteryEstimate Helper.app";
+			remoteRef = 2144D60523CB4B9D0016B4E8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2144D60823CB4B9D0016B4E8 /* BatteryEstimate HelperTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "BatteryEstimate HelperTests.xctest";
+			remoteRef = 2144D60723CB4B9D0016B4E8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		2144D60A23CB4B9D0016B4E8 /* BatteryEstimate HelperUITests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "BatteryEstimate HelperUITests.xctest";
+			remoteRef = 2144D60923CB4B9D0016B4E8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		2149A723237D9A7E009EFD30 /* Resources */ = {
@@ -260,7 +351,6 @@
 			files = (
 				2149A72B237D9A7E009EFD30 /* ViewController.swift in Sources */,
 				2149A729237D9A7E009EFD30 /* AppDelegate.swift in Sources */,
-				2149A757237DD1BC009EFD30 /* BatteryEstimate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,6 +516,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = BatteryEstimate/BatteryEstimate.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = S5F8M54DQU;
@@ -435,8 +526,10 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MARKETING_VERSION = 1.1.2.8;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nafeeworkshop.BatteryEstimate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
@@ -448,6 +541,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = BatteryEstimate/BatteryEstimate.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = S5F8M54DQU;
@@ -457,8 +551,10 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MARKETING_VERSION = 1.1.2.8;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nafeeworkshop.BatteryEstimate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};

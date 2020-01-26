@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import ServiceManagement
 
 class ViewController: NSViewController {
 
@@ -21,7 +22,29 @@ class ViewController: NSViewController {
         // Update the view, if already loaded.
         }
     }
-
-
+    
+    @IBOutlet var launchOnLogin: NSButton! {
+        didSet {
+            launchOnLogin.state = (AppDelegate.Preferences.autoLaunch) ? NSButton.StateValue.on : NSButton.StateValue.off
+        }
+    }
+    
+    @IBAction func launchOnLoginClicked(_ checkbox: NSButton) {
+        AppDelegate.Preferences.autoLaunch = (checkbox.state == NSButton.StateValue.on)
+        
+        if checkbox.state == NSButton.StateValue.on {
+            if SMLoginItemSetEnabled(AppDelegate.helperIdentifier as CFString, true) {
+                UserDefaults.standard.set(true, forKey: AppDelegate.Preferences.autoLaunchKey)
+            }
+            else {
+                checkbox.state = NSButton.StateValue.off
+            }
+        }
+        else {
+            if SMLoginItemSetEnabled(AppDelegate.helperIdentifier as CFString, false) {
+                UserDefaults.standard.set(false, forKey: AppDelegate.Preferences.autoLaunchKey)
+            }
+        }
+    }
 }
 
