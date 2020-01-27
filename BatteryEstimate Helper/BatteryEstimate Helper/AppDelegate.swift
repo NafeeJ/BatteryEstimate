@@ -11,11 +11,11 @@ import Cocoa
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-    func applicationDidFinishLaunching(_ aNotification: Notification) {
-        let path: String = Bundle.main.bundleURL.deletingLastPathComponent().deletingLastPathComponent().deletingLastPathComponent().deletingLastPathComponent().path
-
-        NSWorkspace.shared.launchApplication(path)
-    }
+//    func applicationDidFinishLaunching(_ aNotification: Notification) {
+//        let path: String = Bundle.main.bundleURL.deletingLastPathComponent().deletingLastPathComponent().deletingLastPathComponent().deletingLastPathComponent().path
+//
+//        NSWorkspace.shared.launchApplication(path)
+//    }
 
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application

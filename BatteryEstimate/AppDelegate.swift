@@ -17,14 +17,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var menu: NSMenu?
     var windowController: MainWindowController?
     
-    static let mainIdentifier = "com.nafeeworkshop.BatteryEstimate"
-    static let helperIdentifier = "com.nafeeworkshop.BatteryEstimate-Helper"
+//    static let mainIdentifier = "com.nafeeworkshop.BatteryEstimate"
+//    static let helperIdentifier = "com.nafeeworkshop.BatteryEstimate-Helper"
     
     //Prefereces and their respective keys
-    struct Preferences {
-        static var autoLaunch = false
-        static let autoLaunchKey: String = "LaunchOnStartup"
-    }
+//    struct Preferences {
+//        static var autoLaunch = false
+//        static let autoLaunchKey: String = "LaunchOnStartup"
+//    }
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         
@@ -101,10 +101,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     func loadPreferences() {
-        //Launch on startup
-        if (UserDefaults.standard.value(forKey: Preferences.autoLaunchKey) != nil) {
-            Preferences.autoLaunch = UserDefaults.standard.value(forKey: Preferences.autoLaunchKey) as! Bool
-        }
+//        //Launch on startup
+//        if (UserDefaults.standard.value(forKey: Preferences.autoLaunchKey) != nil) {
+//            Preferences.autoLaunch = UserDefaults.standard.value(forKey: Preferences.autoLaunchKey) as! Bool
+//        }
     }
     
     @objc func loadPrefsWindow() {

@@ -15,6 +15,9 @@
 		2149A730237D9A80009EFD30 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2149A72E237D9A80009EFD30 /* Main.storyboard */; };
 		2149A73C237D9A81009EFD30 /* BatteryEstimateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2149A73B237D9A81009EFD30 /* BatteryEstimateTests.swift */; };
 		2149A747237D9A81009EFD30 /* BatteryEstimateUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2149A746237D9A81009EFD30 /* BatteryEstimateUITests.swift */; };
+		215276FA23DE73F6007676A5 /* LaunchAtLogin.framework.dSYM in Resources */ = {isa = PBXBuildFile; fileRef = 215276F823DE73F6007676A5 /* LaunchAtLogin.framework.dSYM */; };
+		215276FB23DE7478007676A5 /* LaunchAtLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 215276F723DE73F6007676A5 /* LaunchAtLogin.framework */; };
+		215276FC23DE7478007676A5 /* LaunchAtLogin.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 215276F723DE73F6007676A5 /* LaunchAtLogin.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		216A355923D52E3C007507A5 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 216A355523D52E3C007507A5 /* Cocoa.framework */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +70,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		215276FD23DE7478007676A5 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				215276FC23DE7478007676A5 /* LaunchAtLogin.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -85,6 +99,8 @@
 		2149A742237D9A81009EFD30 /* BatteryEstimateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BatteryEstimateUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2149A746237D9A81009EFD30 /* BatteryEstimateUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatteryEstimateUITests.swift; sourceTree = "<group>"; };
 		2149A748237D9A81009EFD30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		215276F723DE73F6007676A5 /* LaunchAtLogin.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LaunchAtLogin.framework; path = Carthage/Build/Mac/LaunchAtLogin.framework; sourceTree = "<group>"; };
+		215276F823DE73F6007676A5 /* LaunchAtLogin.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = LaunchAtLogin.framework.dSYM; path = Carthage/Build/Mac/LaunchAtLogin.framework.dSYM; sourceTree = "<group>"; };
 		216A355523D52E3C007507A5 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -95,6 +111,7 @@
 			files = (
 				216A355923D52E3C007507A5 /* Cocoa.framework in Frameworks */,
 				2144D5B923CB49930016B4E8 /* ServiceManagement.framework in Frameworks */,
+				215276FB23DE7478007676A5 /* LaunchAtLogin.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,6 +135,8 @@
 		2144D5B723CB49930016B4E8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				215276F723DE73F6007676A5 /* LaunchAtLogin.framework */,
+				215276F823DE73F6007676A5 /* LaunchAtLogin.framework.dSYM */,
 				216A355523D52E3C007507A5 /* Cocoa.framework */,
 				2144D5B823CB49930016B4E8 /* ServiceManagement.framework */,
 			);
@@ -198,6 +217,8 @@
 				2149A722237D9A7E009EFD30 /* Frameworks */,
 				2149A723237D9A7E009EFD30 /* Resources */,
 				2144D5BA23CB4A300016B4E8 /* CopyFiles */,
+				215276FD23DE7478007676A5 /* Embed Frameworks */,
+				2134E37A23DD8B7400FCF70B /* Carthage Script */,
 			);
 			buildRules = (
 			);
@@ -325,6 +346,7 @@
 			files = (
 				2149A72D237D9A80009EFD30 /* Assets.xcassets in Resources */,
 				2149A730237D9A80009EFD30 /* Main.storyboard in Resources */,
+				215276FA23DE73F6007676A5 /* LaunchAtLogin.framework.dSYM in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,6 +365,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2134E37A23DD8B7400FCF70B /* Carthage Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Carthage Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PROJECT_DIR}/Carthage/Build/Mac/LaunchAtLogin.framework/Resources/copy-helper.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2149A721237D9A7E009EFD30 /* Sources */ = {
@@ -521,12 +565,16 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = S5F8M54DQU;
 				ENABLE_HARDENED_RUNTIME = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = BatteryEstimate/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.1.2.8;
+				MARKETING_VERSION = 1.1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nafeeworkshop.BatteryEstimate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -546,12 +594,16 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = S5F8M54DQU;
 				ENABLE_HARDENED_RUNTIME = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = BatteryEstimate/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.1.2.8;
+				MARKETING_VERSION = 1.1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nafeeworkshop.BatteryEstimate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
