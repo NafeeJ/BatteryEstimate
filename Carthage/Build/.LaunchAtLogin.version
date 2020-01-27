@@ -1,0 +1,10 @@
+{
+  "commitish" : "master",
+  "Mac" : [
+    {
+      "name" : "LaunchAtLogin",
+      "hash" : "3e545fbf804402b8590ac4c6f4c212d0ead7d5d39bf7885dd70529d460c04222",
+      "swiftToolchainVersion" : "5.1 (swiftlang-1100.0.270.13 clang-1100.0.33.7)"
+    }
+  ]
+}
