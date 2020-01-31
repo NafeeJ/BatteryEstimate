@@ -711,7 +711,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5t5-0l-dah">
-                                <rect key="frame" x="163" y="126" width="154" height="18"/>
+                                <rect key="frame" x="18" y="234" width="154" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="check" title="Auto Launch on Login" bezelStyle="regularSquare" imagePosition="left" inset="2" id="ygO-wr-IVr">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>

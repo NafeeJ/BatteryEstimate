@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2144D5B923CB49930016B4E8 /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2144D5B823CB49930016B4E8 /* ServiceManagement.framework */; };
-		2144D60B23CB4BD00016B4E8 /* BatteryEstimate Helper.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2144D60623CB4B9D0016B4E8 /* BatteryEstimate Helper.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		2149A729237D9A7E009EFD30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2149A728237D9A7E009EFD30 /* AppDelegate.swift */; };
 		2149A72B237D9A7E009EFD30 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2149A72A237D9A7E009EFD30 /* ViewController.swift */; };
 		2149A72D237D9A80009EFD30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2149A72C237D9A80009EFD30 /* Assets.xcassets */; };
@@ -22,27 +21,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		2144D60523CB4B9D0016B4E8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2144D5FF23CB4B9C0016B4E8 /* BatteryEstimate Helper.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 2144D5D023CB4B9B0016B4E8;
-			remoteInfo = "BatteryEstimate Helper";
-		};
-		2144D60723CB4B9D0016B4E8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2144D5FF23CB4B9C0016B4E8 /* BatteryEstimate Helper.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 2144D5E223CB4B9C0016B4E8;
-			remoteInfo = "BatteryEstimate HelperTests";
-		};
-		2144D60923CB4B9D0016B4E8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2144D5FF23CB4B9C0016B4E8 /* BatteryEstimate Helper.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 2144D5ED23CB4B9C0016B4E8;
-			remoteInfo = "BatteryEstimate HelperUITests";
-		};
 		2149A738237D9A81009EFD30 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 2149A71D237D9A7E009EFD30 /* Project object */;
@@ -66,7 +44,6 @@
 			dstPath = Contents/Library/LoginItems;
 			dstSubfolderSpec = 1;
 			files = (
-				2144D60B23CB4BD00016B4E8 /* BatteryEstimate Helper.app in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,7 +62,6 @@
 
 /* Begin PBXFileReference section */
 		2144D5B823CB49930016B4E8 /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
-		2144D5FF23CB4B9C0016B4E8 /* BatteryEstimate Helper.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "BatteryEstimate Helper.xcodeproj"; path = "BatteryEstimate Helper/BatteryEstimate Helper.xcodeproj"; sourceTree = "<group>"; };
 		2149A725237D9A7E009EFD30 /* BatteryEstimate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BatteryEstimate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2149A728237D9A7E009EFD30 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2149A72A237D9A7E009EFD30 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -143,16 +119,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		2144D60023CB4B9C0016B4E8 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				2144D60623CB4B9D0016B4E8 /* BatteryEstimate Helper.app */,
-				2144D60823CB4B9D0016B4E8 /* BatteryEstimate HelperTests.xctest */,
-				2144D60A23CB4B9D0016B4E8 /* BatteryEstimate HelperUITests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		2149A71C237D9A7E009EFD30 = {
 			isa = PBXGroup;
 			children = (
@@ -161,7 +127,6 @@
 				2149A745237D9A81009EFD30 /* BatteryEstimateUITests */,
 				2149A726237D9A7E009EFD30 /* Products */,
 				2144D5B723CB49930016B4E8 /* Frameworks */,
-				2144D5FF23CB4B9C0016B4E8 /* BatteryEstimate Helper.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -300,12 +265,6 @@
 			mainGroup = 2149A71C237D9A7E009EFD30;
 			productRefGroup = 2149A726237D9A7E009EFD30 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 2144D60023CB4B9C0016B4E8 /* Products */;
-					ProjectRef = 2144D5FF23CB4B9C0016B4E8 /* BatteryEstimate Helper.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				2149A724237D9A7E009EFD30 /* BatteryEstimate */,
@@ -314,30 +273,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		2144D60623CB4B9D0016B4E8 /* BatteryEstimate Helper.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = "BatteryEstimate Helper.app";
-			remoteRef = 2144D60523CB4B9D0016B4E8 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		2144D60823CB4B9D0016B4E8 /* BatteryEstimate HelperTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "BatteryEstimate HelperTests.xctest";
-			remoteRef = 2144D60723CB4B9D0016B4E8 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		2144D60A23CB4B9D0016B4E8 /* BatteryEstimate HelperUITests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "BatteryEstimate HelperUITests.xctest";
-			remoteRef = 2144D60923CB4B9D0016B4E8 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		2149A723237D9A7E009EFD30 /* Resources */ = {
@@ -574,7 +509,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.1.4;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nafeeworkshop.BatteryEstimate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -603,7 +538,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.1.4;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nafeeworkshop.BatteryEstimate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
