@@ -721,13 +721,57 @@
                                     <action selector="launchOnLoginClicked:" target="XfG-lQ-9wD" id="g1O-ct-lln"/>
                                 </connections>
                             </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kgy-U5-4cN">
+                                <rect key="frame" x="18" y="214" width="176" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="check" title="Show Battery Percentage" bezelStyle="regularSquare" imagePosition="left" inset="2" id="Gq0-Xa-bai">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="showPercentageClicked:" target="XfG-lQ-9wD" id="9LR-nD-LoE"/>
+                                </connections>
+                            </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TfI-y1-Q2T">
+                                <rect key="frame" x="18" y="192" width="167" height="16"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Seconds Between Refresh:" id="roV-oO-yDO">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9JO-fh-s2x">
+                                <rect key="frame" x="189" y="186" width="48" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <popUpButtonCell key="cell" type="push" title="2" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="dBK-Ho-7SS" id="rpZ-wf-ixP">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                    <menu key="menu" id="wvc-7i-gJd">
+                                        <items>
+                                            <menuItem title="1" id="vsp-F7-err"/>
+                                            <menuItem title="2" state="on" id="dBK-Ho-7SS"/>
+                                            <menuItem title="3" id="gAF-6J-FiA"/>
+                                            <menuItem title="4" id="ssU-2q-rhc"/>
+                                            <menuItem title="5" id="JX1-zk-dhM"/>
+                                        </items>
+                                    </menu>
+                                </popUpButtonCell>
+                                <connections>
+                                    <action selector="updateIntervalClicked:" target="XfG-lQ-9wD" id="SjO-Os-vyE"/>
+                                </connections>
+                            </popUpButton>
                         </subviews>
                     </view>
                     <connections>
                         <outlet property="launchOnLogin" destination="5t5-0l-dah" id="BLA-qK-ouH"/>
+                        <outlet property="showBatteryPercentage" destination="kgy-U5-4cN" id="1FU-dh-OAq"/>
+                        <outlet property="showPercentage" destination="kgy-U5-4cN" id="2ih-hb-Thp"/>
+                        <outlet property="updateInterval" destination="9JO-fh-s2x" id="Rhc-n5-O7Y"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <userDefaultsController representsSharedInstance="YES" id="wOg-uT-IQQ"/>
             </objects>
             <point key="canvasLocation" x="75" y="655"/>
         </scene>

@@ -33,5 +33,27 @@ class ViewController: NSViewController {
     @IBAction func launchOnLoginClicked(_ checkbox: NSButton) {
         LaunchAtLogin.isEnabled = (checkbox.state == NSButton.StateValue.on)
     }
+    
+    @IBOutlet var showPercentage: NSButton! {
+        didSet {
+            showPercentage.state = AppDelegate.showPercentage ? NSButton.StateValue.on : NSButton.StateValue.off
+        }
+    }
+    
+    @IBAction func showPercentageClicked(_ checkbox: NSButton) {
+        AppDelegate.showPercentage = checkbox.state == NSButton.StateValue.on
+        UserDefaults.standard.set(checkbox.state == NSButton.StateValue.on, forKey: AppDelegate.showPercentageKey)
+    }
+    
+    @IBOutlet var updateInterval: NSPopUpButton! {
+        didSet {
+            updateInterval.selectItem(at: Int(AppDelegate.updateInterval - 1))
+        }
+    }
+    
+    @IBAction func updateIntervalClicked(_ menuItem: NSPopUpButton) {
+        AppDelegate.updateInterval = Double(menuItem.indexOfSelectedItem + 1)
+        UserDefaults.standard.set(AppDelegate.updateInterval, forKey: AppDelegate.updateIntervalKey)
+    }
 }
 
