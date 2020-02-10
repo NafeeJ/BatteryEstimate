@@ -18,28 +18,27 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var menu: NSMenu?
     var windowController: MainWindowController?
     
-    //Power values
-    var isCharging: Bool!
-    var batteryPercentage: String!
+    //power values
+    var remainingSeconds: Double = -1
+    var isCharged: Bool = false
+    var timeToFullCharge: Double = -1
+    var batteryPercentage: String = "Error"
     
-    //User Preferences
-    static let showPercentageKey: String = "ShowPercentage"
+    //user Preferences
+    static let showPercentageKey: String = "ShowPercentageKey"
     static var showPercentage: Bool = false
     static let updateIntervalKey: String = "UpdateIntervalKey"
     static var updateInterval: Double = 2
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         
-        //Create menu
+        //create menu
         menu = NSMenu()
         menu?.addItem(NSMenuItem(title: "Preferences...", action: #selector(loadPrefsWindow), keyEquivalent: "p"))
         menu?.addItem(NSMenuItem(title: "Quit BatteryEstimate", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q"))
         statusItem.menu = menu
         
-        //load user preferences
         loadPreferences()
-        
-        //Update time remaining
         updateAll()
         
         //initialize window
@@ -53,8 +52,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
     }
     
-    //Set menu bar title to current time remaining
+    //update power values then status
     @objc func updateAll() {
+        //if user changed interval preference then stop timer and make new one
         if AppDelegate.changeInterval() {
             updateTimer?.invalidate()
             updateTimer = Timer.scheduledTimer(timeInterval: AppDelegate.updateInterval, target: self, selector: #selector(updateAll), userInfo: nil, repeats: true)
@@ -63,14 +63,16 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
         
         updatePowerValues()
-        if (!AppDelegate.showPercentage) { statusItem.button?.title = getTimeRemaining() }
-        else { statusItem.button?.title = getTimeRemaining() + " | " + batteryPercentage}
+        if (AppDelegate.showPercentage) { statusItem.button?.title = getTimeRemaining() + " | " + batteryPercentage}
+        else { statusItem.button?.title = getTimeRemaining() }
     }
     
+    //checks if user changed update interval preference
     static func changeInterval() -> Bool {
         return AppDelegate.currentInterval != AppDelegate.updateInterval
     }
     
+    //loads user preferences from UserDefaults into AppDelegate values
     func loadPreferences() {
         if (UserDefaults.standard.value(forKey: AppDelegate.showPercentageKey) != nil) {
             AppDelegate.showPercentage = UserDefaults.standard.value(forKey: AppDelegate.showPercentageKey) as! Bool
@@ -80,61 +82,65 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
     }
     
-    //returns esimated battery remaining as String in format HH:MM or other status
+    //returns estimated battery remaining, calculating, time until charged, charged, or not charging
     func getTimeRemaining() -> String {
-        let remainingSeconds: Double = IOPSGetTimeRemainingEstimate()
-        
-        //most likely condition so test first for optimization
-        if (remainingSeconds > 0.0) {
-            let formattedHours: Int = Int(floor(remainingSeconds / 3600))
-            let formattedMinutes: Int = Int(remainingSeconds / 60) % 60
-            
-            if (formattedMinutes < 10) { return "↓ " + String(formattedHours) + ":" + "0" + String(formattedMinutes) }
-            
-            return "↓ " + String(formattedHours) + ":" + String(formattedMinutes)
-        }
-        
-        //if its not greater than 0 then check if its unknown, if so just say that its being calculated
-        else if (remainingSeconds == kIOPSTimeRemainingUnknown) { return "Calculating" }
-            
-        //remainingSeconds fell through its checks so device must be plugged in, check if its charging and return so
-        else if (isCharging) { return "⚡︎ Charging" } //ϟ
-        
-        //fell through charging check, must not be charging
+        //if macOS returns a positive battery estimate then return it
+        if (remainingSeconds > 0.0) { return "↓ " + secondsFormatter(seconds: remainingSeconds) }
+        //if the estimate is unknown or if device is plugged in and time until charged is unknown then return calculating
+        else if (remainingSeconds == kIOPSTimeRemainingUnknown || timeToFullCharge == -1) { return "Calculating" }
+        //if macOS returns positive charge estimate then return it
+        else if (timeToFullCharge > 0.0) { return "⚡︎ " + secondsFormatter(seconds: timeToFullCharge * 60) } //ϟ
+        //check if the battery is charged
+        else if (isCharged) { return "⚡︎ Charged" }
+        //fell through estimate and charging checks, must not be charging
         return "✗ Not Charging"
     }
     
     //updates power values
     func updatePowerValues() {
-        let info = IOPSCopyPowerSourcesInfo().takeRetainedValue()
-        let list = IOPSCopyPowerSourcesList(info).takeRetainedValue() as Array
+        //update remaining seconds of battery life as defined by macOS function
+        remainingSeconds = IOPSGetTimeRemainingEstimate()
         
-        for ps in list {
-            if let desc = IOPSGetPowerSourceDescription(info, ps).takeUnretainedValue() as? [String: Any] {
-                //if the powersource is the battery, return if it is charging or not
-                let psName = desc[kIOPSNameKey] as? String
-                
-                //if the power source is nil or isn't the internal battery then set error values for power values
-                if (psName != nil && psName == "InternalBattery-0") {
+        let psInfo = IOPSCopyPowerSourcesInfo().takeRetainedValue()
+        let psList = IOPSCopyPowerSourcesList(psInfo).takeRetainedValue() as Array
+        
+        for ps in psList {
+            if let psDesc = IOPSGetPowerSourceDescription(psInfo, ps).takeUnretainedValue() as? [String: Any] {
+                if (psDesc[kIOPSNameKey] != nil && psDesc[kIOPSNameKey] as? String == "InternalBattery-0") {
                     
-                    //update isCharging
-                    let isCharging = desc[kIOPSIsChargingKey] as? Bool
-                    if (isCharging != nil) { self.isCharging = isCharging! }
-                    else { self.isCharging = false }
+                    //update timeToFullCharge with -1 as default value in case nil is returned
+                    timeToFullCharge = psDesc[kIOPSTimeToFullChargeKey] as? Double ?? -1
+                    
+                    //update isCharged with false as default value in case nil is returned
+                    isCharged = psDesc[kIOPSIsChargedKey] as? Bool ?? false
                     
                     //only update batteryPercentage if the user wants the percentage
                     if (AppDelegate.showPercentage) {
-                        let currentCapacity = desc[kIOPSCurrentCapacityKey] as! Double
-                        let maxCapacity = desc[kIOPSMaxCapacityKey] as! Double
-                        self.batteryPercentage = String(format: "%.0f", (currentCapacity / maxCapacity) * 100) + "%"
+                        //divide current capacity by max capacity (must do this since different power sources have differently defined values)
+                        let currentCapacity = psDesc[kIOPSCurrentCapacityKey] as? Double ?? -1
+                        let maxCapacity = psDesc[kIOPSMaxCapacityKey] as? Double ?? 1
+                        batteryPercentage = String(format: "%.0f", (currentCapacity / maxCapacity) * 100) + "%"
+                        //Int((currentCapacity / maxCapacity) * 100)
                     }
-                }
-                else {
-                    self.isCharging = false
-                    batteryPercentage = "Error"
+                    return
                 }
             }
         }
+        //default power values
+        remainingSeconds = -1
+        isCharged = false
+        timeToFullCharge = -1
+        batteryPercentage = "Error"
+    }
+    
+    //formats seconds into HH:MM
+    func secondsFormatter(seconds: Double) -> String {
+        let formattedHours: Int = Int(floor(seconds / 3600))
+        let formattedMinutes: Int = Int(seconds / 60) % 60
+        
+        if (formattedMinutes < 10) { return String(formattedHours) + ":" + "0" + String(formattedMinutes) }
+        
+        return String(formattedHours) + ":" + String(formattedMinutes)
     }
     
     @objc func loadPrefsWindow() {
@@ -143,7 +149,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 }
 
-//Sets up the main window which will be for preferences
+//sets up the main window which will be for preferences
 class MainWindowController: NSWindowController {
     override func windowDidLoad() {
         super.windowDidLoad()

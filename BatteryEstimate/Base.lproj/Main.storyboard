@@ -710,9 +710,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5t5-0l-dah">
-                                <rect key="frame" x="18" y="234" width="154" height="18"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="5t5-0l-dah">
+                                <rect key="frame" x="18" y="234" width="444" height="18"/>
                                 <buttonCell key="cell" type="check" title="Auto Launch on Login" bezelStyle="regularSquare" imagePosition="left" inset="2" id="ygO-wr-IVr">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -721,9 +720,8 @@
                                     <action selector="launchOnLoginClicked:" target="XfG-lQ-9wD" id="g1O-ct-lln"/>
                                 </connections>
                             </button>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kgy-U5-4cN">
-                                <rect key="frame" x="18" y="214" width="176" height="18"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="kgy-U5-4cN">
+                                <rect key="frame" x="18" y="214" width="444" height="18"/>
                                 <buttonCell key="cell" type="check" title="Show Battery Percentage" bezelStyle="regularSquare" imagePosition="left" inset="2" id="Gq0-Xa-bai">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -732,21 +730,22 @@
                                     <action selector="showPercentageClicked:" target="XfG-lQ-9wD" id="9LR-nD-LoE"/>
                                 </connections>
                             </button>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TfI-y1-Q2T">
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="TfI-y1-Q2T">
                                 <rect key="frame" x="18" y="192" width="167" height="16"/>
-                                <autoresizingMask key="autoresizingMask"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Seconds Between Refresh:" id="roV-oO-yDO">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9JO-fh-s2x">
-                                <rect key="frame" x="189" y="186" width="48" height="25"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="9JO-fh-s2x">
+                                <rect key="frame" x="189" y="186" width="49" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="akz-ds-58P"/>
+                                </constraints>
                                 <popUpButtonCell key="cell" type="push" title="2" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="dBK-Ho-7SS" id="rpZ-wf-ixP">
                                     <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
+                                    <font key="font" metaFont="menu"/>
                                     <menu key="menu" id="wvc-7i-gJd">
                                         <items>
                                             <menuItem title="1" id="vsp-F7-err"/>
@@ -762,10 +761,21 @@
                                 </connections>
                             </popUpButton>
                         </subviews>
+                        <constraints>
+                            <constraint firstItem="5t5-0l-dah" firstAttribute="leading" secondItem="kgy-U5-4cN" secondAttribute="leading" id="BgU-6C-Bvc"/>
+                            <constraint firstItem="9JO-fh-s2x" firstAttribute="leading" secondItem="TfI-y1-Q2T" secondAttribute="trailing" constant="8" symbolic="YES" id="EEF-YD-17b"/>
+                            <constraint firstItem="kgy-U5-4cN" firstAttribute="top" secondItem="5t5-0l-dah" secondAttribute="bottom" constant="6" symbolic="YES" id="N3t-eA-FNQ"/>
+                            <constraint firstItem="5t5-0l-dah" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" symbolic="YES" id="P0p-NC-Bfb"/>
+                            <constraint firstItem="TfI-y1-Q2T" firstAttribute="baseline" secondItem="9JO-fh-s2x" secondAttribute="baseline" id="S33-Mv-eTf"/>
+                            <constraint firstItem="kgy-U5-4cN" firstAttribute="leading" secondItem="TfI-y1-Q2T" secondAttribute="leading" id="TNh-Db-mkK"/>
+                            <constraint firstItem="5t5-0l-dah" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" symbolic="YES" id="rd7-7d-VN5"/>
+                            <constraint firstAttribute="trailing" secondItem="kgy-U5-4cN" secondAttribute="trailing" constant="20" symbolic="YES" id="tqn-1J-mDv"/>
+                            <constraint firstItem="TfI-y1-Q2T" firstAttribute="top" secondItem="kgy-U5-4cN" secondAttribute="bottom" constant="8" symbolic="YES" id="vIU-xj-oTS"/>
+                            <constraint firstAttribute="trailing" secondItem="5t5-0l-dah" secondAttribute="trailing" constant="20" symbolic="YES" id="vZn-F6-hMH"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="launchOnLogin" destination="5t5-0l-dah" id="BLA-qK-ouH"/>
-                        <outlet property="showBatteryPercentage" destination="kgy-U5-4cN" id="1FU-dh-OAq"/>
                         <outlet property="showPercentage" destination="kgy-U5-4cN" id="2ih-hb-Thp"/>
                         <outlet property="updateInterval" destination="9JO-fh-s2x" id="Rhc-n5-O7Y"/>
                     </connections>

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2144D5B923CB49930016B4E8 /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2144D5B823CB49930016B4E8 /* ServiceManagement.framework */; };
 		2149A729237D9A7E009EFD30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2149A728237D9A7E009EFD30 /* AppDelegate.swift */; };
 		2149A72B237D9A7E009EFD30 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2149A72A237D9A7E009EFD30 /* ViewController.swift */; };
 		2149A72D237D9A80009EFD30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2149A72C237D9A80009EFD30 /* Assets.xcassets */; };
@@ -17,7 +16,6 @@
 		215276FA23DE73F6007676A5 /* LaunchAtLogin.framework.dSYM in Resources */ = {isa = PBXBuildFile; fileRef = 215276F823DE73F6007676A5 /* LaunchAtLogin.framework.dSYM */; };
 		215276FB23DE7478007676A5 /* LaunchAtLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 215276F723DE73F6007676A5 /* LaunchAtLogin.framework */; };
 		215276FC23DE7478007676A5 /* LaunchAtLogin.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 215276F723DE73F6007676A5 /* LaunchAtLogin.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		216A355923D52E3C007507A5 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 216A355523D52E3C007507A5 /* Cocoa.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,8 +83,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				216A355923D52E3C007507A5 /* Cocoa.framework in Frameworks */,
-				2144D5B923CB49930016B4E8 /* ServiceManagement.framework in Frameworks */,
 				215276FB23DE7478007676A5 /* LaunchAtLogin.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -484,6 +480,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "";
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 			};
@@ -509,7 +506,8 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nafeeworkshop.BatteryEstimate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -538,7 +536,8 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.3;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nafeeworkshop.BatteryEstimate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

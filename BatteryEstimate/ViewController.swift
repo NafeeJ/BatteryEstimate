@@ -6,8 +6,6 @@
 //  Copyright © 2019 Nafee Workshop. All rights reserved.
 //
 
-import Cocoa
-import ServiceManagement
 import LaunchAtLogin
 
 class ViewController: NSViewController {
