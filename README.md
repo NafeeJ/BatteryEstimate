@@ -25,6 +25,6 @@ Download latest version from [here](https://github.com/NafeeJ/BatteryEstimate/re
 * Charge estimate is also derived directly from the MacOS API which I guess is calculated based off of the rate of charge coming into the battery.
 
 ### Thanks
-https://github.com/iglance/iGlance for development reference
-https://github.com/sindresorhus/LaunchAtLogin for launch at login functionality
-https://github.com/LinusU/node-appdmg for making the dmg
+* https://github.com/iglance/iGlance for development reference
+* https://github.com/sindresorhus/LaunchAtLogin for launch at login functionality
+* https://github.com/LinusU/node-appdmg for making the dmg
