@@ -2,11 +2,15 @@
 Brings back the estimated battery time remaining to the menu bar for MacOS / OS X
 
 ### Draining:
-<img src="Images/BE_Draining_NoPercent.png" width=500> | <img src="Images/BE_Draining_Percent.png" width=500>
+<img src="Images/BE_Draining_NoPercent.png" width=500>
+
+<img src="Images/BE_Draining_Percent.png" width=500>
 
 ### Charging:
-<img src="Images/BE_Charging_NoPercent.png">
-<img src="Images/BE_Charging_Percent.png">
+<img src="Images/BE_Charging_NoPercent.png" width=500>
+
+<img src="Images/BE_Charging_Percent.png" width=500>
+
 
 Download latest version from [here](https://github.com/NafeeJ/BatteryEstimate/releases)
 
