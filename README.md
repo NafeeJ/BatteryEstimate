@@ -2,8 +2,8 @@
 Brings back the estimated battery time remaining to the menu bar for MacOS / OS X
 
 ### Draining:
-![](Images/BE_Draining_NoPercent.png)
-![](Images/BE_Draining_Percent.png)
+<img src="Images/BE_Draining_NoPercent.png" width=200>
+<img src="Images/BE_Draining_Percent.png" width=200>
 
 ### Charging:
 <img src="Images/BE_Charging_NoPercent.png">
