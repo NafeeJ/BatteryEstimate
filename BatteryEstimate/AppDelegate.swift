@@ -3,7 +3,7 @@
 //  BatteryEstimate
 //
 //  Created by Nafee Jan on 11/14/19.
-//  Copyright © 2019 Nafee Workshop. All rights reserved.
+//  Copyright © 2020 Nafee Workshop. All rights reserved.
 //
 
 import Cocoa
@@ -34,8 +34,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         //create menu
         menu = NSMenu()
-        menu?.addItem(NSMenuItem(title: "Preferences...", action: #selector(loadPrefsWindow), keyEquivalent: "p"))
-        menu?.addItem(NSMenuItem(title: "Quit BatteryEstimate", action: #selector(NSApplication.terminate(_:)), keyEquivalent: "q"))
+        menu?.addItem(NSMenuItem(title: "About BatteryEstimate", action: #selector(loadAboutWindow), keyEquivalent: ""))
+        menu?.addItem(NSMenuItem.separator())
+        menu?.addItem(NSMenuItem(title: "Preferences...", action: #selector(loadPrefsWindow), keyEquivalent: ""))
+        menu?.addItem(NSMenuItem.separator())
+        menu?.addItem(NSMenuItem(title: "Quit BatteryEstimate", action: #selector(NSApplication.terminate(_:)), keyEquivalent: ""))
         statusItem.menu = menu
         
         loadPreferences()
@@ -145,6 +148,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     @objc func loadPrefsWindow() {
         windowController?.showWindow(nil)
+        NSApp.activate(ignoringOtherApps: true)
+    }
+    
+    @objc func loadAboutWindow() {
+        NSApp.orderFrontStandardAboutPanel()
         NSApp.activate(ignoringOtherApps: true)
     }
 }
