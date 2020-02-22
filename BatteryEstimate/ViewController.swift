@@ -43,6 +43,19 @@ class ViewController: NSViewController {
         UserDefaults.standard.set(checkbox.state == NSButton.StateValue.on, forKey: AppDelegate.showPercentageKey)
     }
     
+    
+    @IBOutlet var multilineStatus: NSButton! {
+        didSet {
+            multilineStatus.state = AppDelegate.multilineStatus ? NSButton.StateValue.on : NSButton.StateValue.off
+        }
+    }
+    
+    @IBAction func multilineStatusClicked(_ checkbox: NSButton) {
+        AppDelegate.multilineStatus = checkbox.state == NSButton.StateValue.on
+        UserDefaults.standard.set(checkbox.state == NSButton.StateValue.on, forKey: AppDelegate.multilineStatusKey)
+    }
+    
+    
     @IBOutlet var updateInterval: NSPopUpButton! {
         didSet {
             updateInterval.selectItem(at: Int(AppDelegate.updateInterval - 1))

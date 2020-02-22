@@ -730,16 +730,26 @@
                                     <action selector="showPercentageClicked:" target="XfG-lQ-9wD" id="9LR-nD-LoE"/>
                                 </connections>
                             </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="4G8-XI-x4J">
+                                <rect key="frame" x="18" y="194" width="444" height="18"/>
+                                <buttonCell key="cell" type="check" title="Multiline Status if Battery Percentage Enabled" bezelStyle="regularSquare" imagePosition="left" inset="2" id="vJ5-hg-L7Q">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="multilineStatusClicked:" target="XfG-lQ-9wD" id="ibK-t9-r5e"/>
+                                </connections>
+                            </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="TfI-y1-Q2T">
-                                <rect key="frame" x="18" y="192" width="167" height="16"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="Seconds Between Refresh:" id="roV-oO-yDO">
+                                <rect key="frame" x="18" y="170" width="209" height="16"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Seconds Between Status Refresh:" id="roV-oO-yDO">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
                             <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="9JO-fh-s2x">
-                                <rect key="frame" x="189" y="186" width="49" height="25"/>
+                                <rect key="frame" x="231" y="164" width="49" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="44" id="akz-ds-58P"/>
                                 </constraints>
@@ -762,20 +772,24 @@
                             </popUpButton>
                         </subviews>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="5t5-0l-dah" secondAttribute="trailing" constant="20" symbolic="YES" id="6th-Oo-yTb"/>
+                            <constraint firstItem="5t5-0l-dah" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" symbolic="YES" id="9Sv-vR-qq5"/>
                             <constraint firstItem="5t5-0l-dah" firstAttribute="leading" secondItem="kgy-U5-4cN" secondAttribute="leading" id="BgU-6C-Bvc"/>
                             <constraint firstItem="9JO-fh-s2x" firstAttribute="leading" secondItem="TfI-y1-Q2T" secondAttribute="trailing" constant="8" symbolic="YES" id="EEF-YD-17b"/>
+                            <constraint firstItem="kgy-U5-4cN" firstAttribute="leading" secondItem="4G8-XI-x4J" secondAttribute="leading" id="JOJ-HB-kd1"/>
                             <constraint firstItem="kgy-U5-4cN" firstAttribute="top" secondItem="5t5-0l-dah" secondAttribute="bottom" constant="6" symbolic="YES" id="N3t-eA-FNQ"/>
-                            <constraint firstItem="5t5-0l-dah" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" symbolic="YES" id="P0p-NC-Bfb"/>
                             <constraint firstItem="TfI-y1-Q2T" firstAttribute="baseline" secondItem="9JO-fh-s2x" secondAttribute="baseline" id="S33-Mv-eTf"/>
                             <constraint firstItem="kgy-U5-4cN" firstAttribute="leading" secondItem="TfI-y1-Q2T" secondAttribute="leading" id="TNh-Db-mkK"/>
-                            <constraint firstItem="5t5-0l-dah" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" symbolic="YES" id="rd7-7d-VN5"/>
-                            <constraint firstAttribute="trailing" secondItem="kgy-U5-4cN" secondAttribute="trailing" constant="20" symbolic="YES" id="tqn-1J-mDv"/>
-                            <constraint firstItem="TfI-y1-Q2T" firstAttribute="top" secondItem="kgy-U5-4cN" secondAttribute="bottom" constant="8" symbolic="YES" id="vIU-xj-oTS"/>
-                            <constraint firstAttribute="trailing" secondItem="5t5-0l-dah" secondAttribute="trailing" constant="20" symbolic="YES" id="vZn-F6-hMH"/>
+                            <constraint firstItem="4G8-XI-x4J" firstAttribute="top" secondItem="kgy-U5-4cN" secondAttribute="bottom" constant="6" symbolic="YES" id="TgA-gB-4zw"/>
+                            <constraint firstItem="5t5-0l-dah" firstAttribute="trailing" secondItem="kgy-U5-4cN" secondAttribute="trailing" id="ZY7-be-iHS"/>
+                            <constraint firstAttribute="trailing" secondItem="4G8-XI-x4J" secondAttribute="trailing" constant="20" symbolic="YES" id="aRy-Uz-zre"/>
+                            <constraint firstItem="5t5-0l-dah" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" symbolic="YES" id="sQX-cA-xCW"/>
+                            <constraint firstItem="TfI-y1-Q2T" firstAttribute="top" secondItem="4G8-XI-x4J" secondAttribute="bottom" constant="10" id="vIU-xj-oTS"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="launchOnLogin" destination="5t5-0l-dah" id="BLA-qK-ouH"/>
+                        <outlet property="multilineStatus" destination="4G8-XI-x4J" id="XJF-bg-mUf"/>
                         <outlet property="showPercentage" destination="kgy-U5-4cN" id="2ih-hb-Thp"/>
                         <outlet property="updateInterval" destination="9JO-fh-s2x" id="Rhc-n5-O7Y"/>
                     </connections>

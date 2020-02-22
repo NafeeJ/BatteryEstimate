@@ -17,6 +17,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     static var currentInterval = AppDelegate.updateInterval
     var menu: NSMenu?
     var windowController: MainWindowController?
+    let statusStyle = NSMutableParagraphStyle()
+    let statusFont = NSFont(name: "Lucida Grande", size: 9.4)
     
     //power values
     var remainingSeconds: Double = -1
@@ -27,6 +29,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     //user Preferences
     static let showPercentageKey: String = "ShowPercentageKey"
     static var showPercentage: Bool = false
+    static let multilineStatusKey: String = "MultilineStatusKey"
+    static var multilineStatus: Bool = false
     static let updateIntervalKey: String = "UpdateIntervalKey"
     static var updateInterval: Double = 2
     
@@ -40,6 +44,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         menu?.addItem(NSMenuItem.separator())
         menu?.addItem(NSMenuItem(title: "Quit BatteryEstimate", action: #selector(NSApplication.terminate(_:)), keyEquivalent: ""))
         statusItem.menu = menu
+        
+        //Format status style
+        statusStyle.alignment = NSTextAlignment.left
         
         loadPreferences()
         updateAll()
@@ -66,8 +73,23 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
         
         updatePowerValues()
-        if (AppDelegate.showPercentage) { statusItem.button?.title = getTimeRemaining() + " | " + batteryPercentage}
-        else { statusItem.button?.title = getTimeRemaining() }
+        
+        //if user wants to show percentage, check if they also want multiline status or not and return according status, otherwise just return the battery estimate
+        if (AppDelegate.showPercentage) {
+            if (AppDelegate.multilineStatus) {
+                let status = NSMutableAttributedString(string: String(format: "%@\n%@", batteryPercentage, getTimeRemaining()))
+                let statusRange = NSMakeRange(0, status.length)
+                status.addAttribute(.paragraphStyle, value: statusStyle, range: statusRange)
+                status.addAttribute(.font, value: statusFont as Any, range: statusRange)
+                statusItem.button?.attributedTitle = status
+            }
+            else {
+                statusItem.button?.title = getTimeRemaining() + " | " + batteryPercentage
+            }
+        }
+        else {
+            statusItem.button?.title = getTimeRemaining()
+        }
     }
     
     //checks if user changed update interval preference
@@ -82,6 +104,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
         if (UserDefaults.standard.value(forKey: AppDelegate.updateIntervalKey) != nil) {
             AppDelegate.updateInterval = UserDefaults.standard.value(forKey: AppDelegate.updateIntervalKey) as! Double
+        }
+        if (UserDefaults.standard.value(forKey: AppDelegate.multilineStatusKey) != nil) {
+            AppDelegate.multilineStatus = UserDefaults.standard.value(forKey: AppDelegate.multilineStatusKey) as! Bool
         }
     }
     
