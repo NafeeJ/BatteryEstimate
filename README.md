@@ -28,3 +28,9 @@ Download latest version from [here](https://github.com/NafeeJ/BatteryEstimate/re
 * https://github.com/iglance/iGlance for development reference
 * https://github.com/sindresorhus/LaunchAtLogin for launch at login functionality
 * https://github.com/LinusU/node-appdmg for making the dmg
+
+<p align="center">
+  <a href="http://forthebadge.com/" target="_blank">
+    <img src="https://forthebadge.com/images/badges/powered-by-electricity.svg"/>
+  </a>
+</p>
