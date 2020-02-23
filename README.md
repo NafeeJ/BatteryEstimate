@@ -15,6 +15,10 @@ Download and install latest version from [here](https://github.com/NafeeJ/Batter
   <img src="Images/BE_Draining_Percent.png" width=500>
 </p>
 
+<p align="center">
+  <img src="Images/BE_Draining_Multiline.png" width=500>
+</p>
+
 ### Charging
 <p align="center">
   <img src="Images/BE_Charging_NoPercent.png" width=500>
@@ -22,6 +26,10 @@ Download and install latest version from [here](https://github.com/NafeeJ/Batter
 
 <p align="center">
   <img src="Images/BE_Charging_Percent.png" width=500>
+</p>
+
+<p align="center">
+  <img src="Images/BE_Charging_Multiline.png" width=500>
 </p>
 
 ### Features
