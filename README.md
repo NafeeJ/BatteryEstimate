@@ -4,7 +4,7 @@ Brings back the estimated battery time remaining to the menu bar for MacOS / OS 
 ### Download
 [Download .dmg file under "Assets" in the latest release here](https://github.com/NafeeJ/BatteryEstimate/releases)
 
-*IMPORTANT*: If you get a warning that BatteryEstimate can't be opened due to an unidentified developer go to: "System Preferences" > "Security & Privacy" > "General" and make sure "Allow apps downloaded from:" is set to "App Store and identified developers". Then try again to open BatteryEstimate and under "System Preferences" > "Security & Privacy" > "General" click on "Open Anyway". You may have to do this for both opening the .dmg file and opening the app once it is in your Applications folder.
+*IMPORTANT*: If you get a warning that BatteryEstimate can't be opened due to an unidentified developer or Apple cannot check it for malicious software go to: "System Preferences" > "Security & Privacy" > "General" and make sure "Allow apps downloaded from:" is set to "App Store and identified developers". Then try again to open BatteryEstimate and under "System Preferences" > "Security & Privacy" > "General" click on "Open Anyway". You may have to do this for both opening the .dmg file and opening the app once it is in your Applications folder.
 
 ### Draining
 <p align="center">
